@@ -1,0 +1,98 @@
+// Wide
+@media screen and (min-width: 1300px)
+  section#intro
+    .row
+      .col
+        .row
+          .col
+            width 25%
+            padding(0 1em 0 0 !important)
+
+// Medium
+@media screen and (max-width: 750px)
+  .grid.features
+    .row
+      .col
+        &.img
+          width 100%
+          flex auto
+          padding(0 !important)
+          order 0 !important
+          .pulse
+            margin 4em auto 0 auto
+        &.featureitem
+          width 100%
+          padding-top 3em !important
+
+
+// Mobile
+@media screen and (max-width: 650px)
+  body
+    font-size 0.9em !important
+
+    h1
+      font-size 2.25em
+    h2
+      font-size 1.5em
+    h3
+      font-size 1.125em
+    h4, h5
+      font-size 1em
+
+  .button, input[type=text], input[type=email], input[type=password], input[type=name]
+    padding(1.5em)
+    margin(1em 0.5em)
+
+  header
+    &.hc
+      padding-bottom 0 !important
+      height 350px !important
+
+  nav
+    ul
+      li
+        display none !important
+
+  .container
+    padding(2em 0) !important
+    &#signup
+      padding(2em 0) !important
+    &#intro
+      padding-top 6em !important
+      .productlogo.giant
+        top -60px !important
+      .products
+        margin-top 3em !important
+
+  .row
+    flex-wrap wrap
+    border none !important
+
+    .col
+      width 100% !important
+      border none !important
+      margin(0 1.25em) !important
+
+  .products
+    .col
+      padding 1.5em 1.25em !important
+
+  .grid.features
+    .row
+      .col
+        .row
+          .col
+            width 50% !important
+            &:nth-child(odd)
+              padding(0 1em 0 0 !important)
+            &:nth-child(even)
+              padding(0 0 0 1em !important)
+
+  footer
+    ul
+      &.products
+        li
+          margin(0.5em 2em)
+      &.social
+        li
+          margin(0 1em)

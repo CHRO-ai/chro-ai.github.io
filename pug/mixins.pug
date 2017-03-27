@@ -1,0 +1,31 @@
+//- Mixins
+mixin button(href,label)
+  a.button(href=href)&attributes(attributes)= label
+
+mixin icon(slug,color)
+  i.fa(class='fa-'+slug,color=color)
+    
+mixin feature(title,color,img)
+  mixin item(title,slug)
+    .col.half
+      h4(color=color+'-dark')
+        +icon(slug,color)
+        =title
+      block
+  .row(class=color)
+    .col.img(class=color)
+      .pulse(class=color+'-dark')
+        img(src='img/'+img+'.svg',class=img)
+    .col.featureitem(class=color)
+      h3(color=color+'-dark')= title
+      .row
+        block
+  
+      
+mixin beta(color)
+  input#email(type='email', placeholder='Email Address' name='email')
+  +button('#','Join Beta List')(fill=color,onClick='signUp(this, this.previousSibling)')
+
+  .box.sm(color=product,style='display:none;')
+    +icon('magic fa-lg',product)
+    | Thanks, friend! You're registered for the beta.
